@@ -1,0 +1,11 @@
+.card-text {
+    max-height: 100px; /* Set the maximum height for the overview text */
+    min-height: 100px; /* Set the maximum height for the overview text */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Display an ellipsis (...) to indicate text overflow */
+  }
+
+  #videoModal .modal-dialog {
+    max-width: 70%;
+    max-height: 100vh!important; /* 80% of the viewport height */
+  }

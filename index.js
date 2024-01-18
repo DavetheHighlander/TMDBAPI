@@ -1,15 +1,17 @@
+console.log("david")
 // Heter API Key Auth i TMDB
-const API_KEY = "435a1409e7cfbec3639caf9e8abe08";
-const API_KEYurl = "https://api.themoviedb.org/3/movie/100?language=en-US&api_key=${API_KEY}";
+var API_KEY = "ebae5f0bd80177ceba5ad2e57d3fd362";
+var API_KEYurl = `${baseUrl}movie/100?language=en-US&api_key=${API_KEY}`;
 
 fetch(API_KEYurl).then((res) => res.json())
 .then((json) => console.log(json))
 .catch((err) => console.error("error:" + err))
+var baseUrl = "https://api.themoviedb.org/3/";
 
 // Heter Access Token Auth i TMDB
-const BAERER_KEY = "iOiJIUzI1NiJ9.eyJhdWQiOiIwODQzNWExNDA5ZTdjZmJlYzM2MzljYWY5ZThhYmUwOCIsInN1YiI6IjY1Njc1NzRlYThiMmNhMDBlYTg5NDFjYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DR1cd80pusLsFjUSchDqPqWwVTeXb1vmZJjSFb1ME4g";
-const BAERER_KEYurl = 'https://api.themoviedb.org/3/movie/100?language=en-US';
-const options = {
+var BAERER_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYmFlNWYwYmQ4MDE3N2NlYmE1YWQyZTU3ZDNmZDM2MiIsInN1YiI6IjY1YTA1N2I5YWUzNjY4MDEyNjk0YmZlYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.oS89ngJTHPclbQVv6ipip_e2XbKerrqgiwJNQDz54aU";
+var BAERER_KEYurl = `${baseUrl}movie/100?language=en-US`;
+var options = {
 method: 'GET',
 headers: {
 accept: 'application/json',
@@ -19,4 +21,4 @@ Authorization: `Bearer ${BAERER_KEY}`
 fetch(BAERER_KEYurl, options)
 .then(res => res.json())
 .then(json => console.log(json))
-.catch(err => console.error('error:' + err))
+.catch(err => console.error('error:' + err));
