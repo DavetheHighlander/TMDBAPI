@@ -54,10 +54,10 @@ async function fetchMovies(category, searchWord) {
                                 </div>
                             </div>
                     `;
-                    // Create a "Titta" button
+                    // Titta" button
                     const tittaButton = card.querySelector('.btn-primary');
 
-                    // Add a click event listener to the existing "Titta" button
+                    //  event listener "Titta" button
                     tittaButton.addEventListener('click', async () => {
                         console.log(movies[i].id)
                         // response = await fetch(baseUrl +  "movie/"+category, options);
@@ -85,7 +85,7 @@ async function fetchMovies(category, searchWord) {
 
                 
             
-                // Append the card to the container
+                // Append card 
                 container.appendChild(card);
             };
         }
@@ -115,18 +115,18 @@ async function fetchMovies(category, searchWord) {
   
 }
 
-// Add click event listener to the anchor element
+// event listener to the anchor element
 document.getElementById("topMovies").addEventListener("click", (event) => {
-    // Prevent the default behavior of the anchor tag
+    // default behavior of the anchor tag
     event.preventDefault();
-    // fetching the top rated movie 
+    // fetching the top movie 
     fetchMovies('top_rated', "");
     headerTitle.innerText="Topp tio filmer"
     
 });
 
 document.getElementById("popularMovies").addEventListener("click", (event) => {
-    // Prevent the default behavior of the anchor tag
+    // default behavior of the anchor tag
     event.preventDefault();
     // fetching the popular movie 
     fetchMovies('popular', "");
